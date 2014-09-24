@@ -1,0 +1,24 @@
+{
+  "name": "upload",
+  "version": "0.0.0",
+  "description": "upload\r ======",
+  "main": "main.js",
+  "dependencies": {
+    "ejs": "^1.0.0",
+    "express": "~4.9.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rubyisapm/upload.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rubyisapm/upload/issues"
+  },
+  "homepage": "https://github.com/rubyisapm/upload"
+}
