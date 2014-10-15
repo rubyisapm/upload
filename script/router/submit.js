@@ -12,17 +12,17 @@ router.use(function(req,res){
     req.encoding='utf-8';
     var form = new formidable.IncomingForm();
     form.encoding = 'utf-8';
-    form.uploadDir = "./mydir";//这里用相对路径
+    form.uploadDir = "./mydir";
     form.parse(req,function(err,fields,files){
         req.body=fields;
         req.files=files;
-        res.end(util.inspect({fields: fields, files: files}));
-        /*var target='./picture/'+files.picture.name;
-        fs.renameSync(form.uploadDir, target,function(){
-            console.log('successful');
-        });*/
+        fs.readFile(files.picture.path,function(err,data){
+            fs.writeFile("uploads/"+files.picture.name, data, function (err) {
+                if (err) throw err;
+                res.send("http://localhost:3000/uploads/"+files.picture.name);
+            });
+        })
+
     });
-
-
 })
 exports.router=router;
