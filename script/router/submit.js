@@ -22,7 +22,6 @@ router.use(function(req,res){
                 res.send("http://localhost:3000/uploads/"+files.picture.name);
             });
         })
-
     });
 })
 exports.router=router;
